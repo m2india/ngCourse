@@ -16,6 +16,7 @@ import { DirectiveStruComponent } from './directive-stru/directive-stru.componen
 import { BasicHighlightDirective } from './basic-highlight.directive/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless.directive';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { UnlessDirective } from './unless.directive';
     DirectiveStruComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   
   ],
   imports: [
