@@ -17,6 +17,8 @@ import { BasicHighlightDirective } from './basic-highlight.directive/basic-highl
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { InactiveServiceComponent } from './inactive-service/inactive-service.component';
+import { ActiveServiceComponent } from './active-service/active-service.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { DropdownDirective } from './shared/dropdown.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    InactiveServiceComponent,
+    ActiveServiceComponent
   
   ],
   imports: [
