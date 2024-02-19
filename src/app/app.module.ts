@@ -19,6 +19,7 @@ import { UnlessDirective } from './unless.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { InactiveServiceComponent } from './inactive-service/inactive-service.component';
 import { ActiveServiceComponent } from './active-service/active-service.component';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { ActiveServiceComponent } from './active-service/active-service.componen
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
