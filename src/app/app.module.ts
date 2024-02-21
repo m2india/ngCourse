@@ -20,6 +20,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { InactiveServiceComponent } from './inactive-service/inactive-service.component';
 import { ActiveServiceComponent } from './active-service/active-service.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     UnlessDirective,
     DropdownDirective,
     InactiveServiceComponent,
-    ActiveServiceComponent
+    ActiveServiceComponent,
+    RecipesStartComponent,
+    RecipeEditComponent
   
   ],
   imports: [
