@@ -10,19 +10,16 @@ import { DirectiveStruComponent } from './directive-stru/directive-stru.componen
 import { BasicHighlightDirective } from './basic-highlight.directive/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless.directive';
-import { DropdownDirective } from './shared/dropdown.directive';
 import { InactiveServiceComponent } from './inactive-service/inactive-service.component';
 import { ActiveServiceComponent } from './active-service/active-service.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeServices } from './recipes/recipe.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
-import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { AuthInerceptorService } from './auth/auth-interceptor.service';
-import { AlertComponent } from './shared/alert/alert.component';
-import { PlaceholderDirective } from './shared/placeholde-directive/placeholder.directive';
 import { RecipeModule } from './recipes/recipes-module';
 import { ShoppingListModule } from './shopping-list/shopping-list-module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -33,13 +30,11 @@ import { ShoppingListModule } from './shopping-list/shopping-list-module';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective,
+
     InactiveServiceComponent,
     ActiveServiceComponent,
     AuthComponent,
-    LoadingSpinnerComponent,
-    AlertComponent,
-    PlaceholderDirective
+
   
   ],
   imports: [
@@ -49,7 +44,8 @@ import { ShoppingListModule } from './shopping-list/shopping-list-module';
     ReactiveFormsModule,
     HttpClientModule,
     RecipeModule,
-    ShoppingListModule
+    ShoppingListModule,
+    SharedModule
   ],
   providers: [ShoppingListService,RecipeServices, {provide: HTTP_INTERCEPTORS, useClass: AuthInerceptorService, multi: true}],
   bootstrap: [AppComponent]
