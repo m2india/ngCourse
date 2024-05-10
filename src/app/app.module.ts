@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DirectiveStruComponent } from './directive-stru/directive-stru.component';
 import { BasicHighlightDirective } from './basic-highlight.directive/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
@@ -24,14 +22,13 @@ import { AuthInerceptorService } from './auth/auth-interceptor.service';
 import { AlertComponent } from './shared/alert/alert.component';
 import { PlaceholderDirective } from './shared/placeholde-directive/placeholder.directive';
 import { RecipeModule } from './recipes/recipes-module';
+import { ShoppingListModule } from './shopping-list/shopping-list-module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     HeaderComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
     DirectiveStruComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
@@ -51,7 +48,8 @@ import { RecipeModule } from './recipes/recipes-module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RecipeModule
+    RecipeModule,
+    ShoppingListModule
   ],
   providers: [ShoppingListService,RecipeServices, {provide: HTTP_INTERCEPTORS, useClass: AuthInerceptorService, multi: true}],
   bootstrap: [AppComponent]

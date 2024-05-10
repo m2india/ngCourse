@@ -11,8 +11,6 @@ import { AuthGuard } from './auth/auth-guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/recipes', pathMatch: 'full'},
-  ,
-  {path: 'shopping-list', component: ShoppingListComponent},
   {path: 'auth', component: AuthComponent}
 ];
 
