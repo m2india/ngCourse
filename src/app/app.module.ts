@@ -18,6 +18,7 @@ import { RecipeModule } from './recipes/recipes-module';
 import { ShoppingListModule } from './shopping-list/shopping-list-module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.modules';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { CoreModule } from './core.modules';
 
     InactiveServiceComponent,
     ActiveServiceComponent,
-    AuthComponent,
+    
 
   
   ],
@@ -39,12 +40,11 @@ import { CoreModule } from './core.modules';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     RecipeModule,
     ShoppingListModule,
-    SharedModule,
-    CoreModule
+    CoreModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
