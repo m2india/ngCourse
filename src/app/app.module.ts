@@ -12,14 +12,12 @@ import { BetterHighlightDirective } from './better-highlight/better-highlight.di
 import { UnlessDirective } from './unless.directive';
 import { InactiveServiceComponent } from './inactive-service/inactive-service.component';
 import { ActiveServiceComponent } from './active-service/active-service.component';
-import { ShoppingListService } from './shopping-list/shopping-list.service';
-import { RecipeServices } from './recipes/recipe.service';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
-import { AuthInerceptorService } from './auth/auth-interceptor.service';
 import { RecipeModule } from './recipes/recipes-module';
 import { ShoppingListModule } from './shopping-list/shopping-list-module';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core.modules';
 
 @NgModule({
   declarations: [
@@ -45,9 +43,10 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     RecipeModule,
     ShoppingListModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
-  providers: [ShoppingListService,RecipeServices, {provide: HTTP_INTERCEPTORS, useClass: AuthInerceptorService, multi: true}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
