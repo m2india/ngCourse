@@ -44,7 +44,8 @@ import { AuthModule } from './auth/auth.module';
     RecipeModule,
     ShoppingListModule,
     CoreModule,
-    AuthModule
+    AuthModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
